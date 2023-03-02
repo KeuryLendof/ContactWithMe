@@ -1,3 +1,15 @@
+:root{
+    --picton-blue-50: #ecfdff;
+    --picton-blue-100: #d0f7fd;
+    --picton-blue-200: #a7edfa;
+    --picton-blue-300: #6bdff5;
+    --picton-blue-400: #46cfec;
+    --picton-blue-500: #0baacf;
+    --picton-blue-600: #0c87ae;
+    --picton-blue-700: #116d8d;
+    --picton-blue-800: #175973;
+    --picton-blue-900: #184a61;
+}
 *{
     margin: 0%;
     padding: 0%;
@@ -5,120 +17,120 @@
 }
 
 body{
-    background: #979DA6;
-
+    background-color: var(--picton-blue-100);
+    color: var(--picton-blue-900);
 }
 
 header{
+    background-color: var(--picton-blue-400);
+}
+.container-header{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding: 25px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding: 25px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub{
+    padding: 50px 0px;
+}
+
+.informacion h1{
+    font-size: 3.3rem;
+}
+.informacion h2{
+    font-size: 2rem;
+    padding: 7px 0;
+}
+.informacion p{
+    line-height: 1.5;
+}
+
+.redes{
+    display: flex;
+    padding: 11px 0;
+    gap: 0.6rem;
+}
+.redes a{
     padding: 10px;
-    background: #68788C;
-    position: fixed;
-    border-radius: 0 0 15% 15%;
-    width: 100%;
-    border-bottom: 2px solid #F2EEB3;
-
-}
-
-h1{
-    padding: 10px;
-
-}
-
-.info{
-    width: 65%;
-}
-
-
-a{
+    gap: 0.3rem;
+    display: flex;
+    cursor: pointer;
+    color: var(--picton-blue-900);
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    border: 2px solid var(--picton-blue-900);;
+    transition: all 0.3s ease;
+    font-size: 24px;
     text-decoration: none;
 }
-
-.wrapper .button{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    
-    margin: 0 5px;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 50px;
+.cv{
+    display: flex;
+    padding: 3px 0;
+    gap: 0.6rem;
+}
+.cv a{
+    padding: 10px;
+    gap: 0.7rem;
+    display: flex;
     cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-out;
+    background: var(--picton-blue-900);;
+    color: var(--picton-blue-100);
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    border: 2px solid var(--picton-blue-900);;
+    transition: all 0.3s ease;
+    font-size: 19px;
+    text-decoration: none;
+}
+.redes a:hover{
+    background: var(--picton-blue-900);;
+    color: var(--picton-blue-100);
 }
 
-.wrapper .button:hover{
-    width: 200px;
+.image figure img{
+    width: 444px;
+    height: 444px;
 }
-.wrapper .button .icon{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    text-align: center;
-    border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-}
-.wrapper .button:nth-child(1):hover .icon{
-    background: #333;
-}
-.wrapper .button:nth-child(2):hover .icon{
-    background: #4267B2;
-}
-.wrapper .button:nth-child(3):hover .icon{
-    background: #1df228;
-}
-.wrapper .button:nth-child(4):hover .icon{
-    background: #307de1;
-}
-.wrapper .button:nth-child(5):hover .icon{
-    background: #0e76a8;
-}
-.wrapper .button:nth-child(6):hover .icon{
-    background: #ff0000;
-}
-.wrapper .button .icon i{
-    font-size: 25px;
-    line-height: 60px;
-    transition: all 0.3s ease-out;
-}
-.wrapper .button:hover .icon i{
-    color: #fff;
-}
-.wrapper .button span{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 60px;
-    margin-left: 10px;
-    transition: all 0.3s ease-out;
-}
-.wrapper .button:nth-child(1) span{
-    color: #333;
-}
-.wrapper .button:nth-child(2) span{
-    color: #4267B2;
-}
-.wrapper .button:nth-child(3) span{
-    color: #1df228;
-}
-.wrapper .button:nth-child(4) span{
-    color: #307de1;
-}
-.wrapper .button:nth-child(5) span{
-    color: #0e76a8;
-}
-.wrapper .button:nth-child(6) span{
-    color: #ff0000;
-}
-
-
-
-
-
-footer{
-    width: 100%;
-    height: 40px;
-    padding-top: 15px;
-    background: #68788C;
+@media screen and (max-width: 1111px){
+    .image figure img{
+        width: 100%;
+        height: auto;
+    }
+} 
+@media screen and (max-width: 900px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 15px 0px;
+    }
+    .image figure img{
+        order: 1;
+    }
+    .informacion{
+        order: 2;
+    }
+    .redes,
+    .cv{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
