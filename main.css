@@ -15,7 +15,9 @@
     padding: 0%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--picton-blue-100);
     color: var(--picton-blue-900);
@@ -74,7 +76,7 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 5%;
-    border: 2px solid var(--picton-blue-900);;
+    border: 2px dashed var(--picton-blue-900);;
     transition: all 0.3s ease;
     font-size: 24px;
     text-decoration: none;
@@ -94,7 +96,7 @@ header{
     align-items: center;
     justify-content: center;
     border-radius: 5%;
-    border: 2px solid var(--picton-blue-900);;
+    border: 2px dashed var(--picton-blue-900);;
     transition: all 0.3s ease;
     font-size: 19px;
     text-decoration: none;
@@ -108,6 +110,55 @@ header{
     width: 444px;
     height: 444px;
 }
+
+.sub-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.sub-title{
+    padding: 10px 0px; 
+}
+.sub-container .about-me{
+    background-color: var(--picton-blue-200);
+    border: 3px dashed var(--picton-blue-900);
+    padding: 25px;
+}
+.sub-container .about-me p{
+    line-height: 1.5;
+}
+
+.sub-container .skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.sub-container .skills article{
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    width: 90px;
+    border: 3px dashed var(--picton-blue-900);
+}
+.sub-container .skills article img{
+    width: 66px;
+    height: 66px;
+    margin-bottom: 6px;
+}
+
+
+footer{
+    background-color: var(--picton-blue-400);
+}
+footer .container-footer{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0px;
+}
+
 @media screen and (max-width: 1111px){
     .image figure img{
         width: 100%;
@@ -132,5 +183,14 @@ header{
     .cv{
         justify-content: center;
         flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 500px){
+    .sub-title{
+        text-align: center;
+    }
+    .sub-container .skills{
+       justify-content: center;
+        gap: 1em;
     }
 }
