@@ -36,6 +36,10 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+.container-header img{
+    width: 40px;
+    height: auto;
+}
 .container{
     max-width: 1200px;
     width: 90%;
@@ -140,6 +144,7 @@ header{
     padding: 15px;
     width: 90px;
     border: 3px dashed var(--picton-blue-900);
+    background-color: var(--picton-blue-200);
 }
 .sub-container .skills article img{
     width: 66px;
@@ -147,6 +152,55 @@ header{
     margin-bottom: 6px;
 }
 
+.sub-container .projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.sub-container .projects article{
+    padding: 10px;
+    border: 3px dashed var(--picton-blue-900);
+    border-radius: 1%;
+    background-color: var(--picton-blue-200);
+    max-width: 550px;
+    min-width: 250px;
+    height: auto;
+}
+.sub-container .projects article figure{
+   padding: 7px 0;
+}
+.sub-container .projects article figure img{
+    width: 550px;
+    height: 250px;
+    border-radius: 1%;
+    object-fit:cover;
+}
+.sub-container .projects article a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--picton-blue-900);
+    font-weight: 600;
+}
+.sub-container .projects article a i{
+    transform: rotate(-40deg);
+    margin-left: 3px;
+}
+.sub-container .projects article p{
+    line-height: 1.5;
+}
+
+.sub-container .projects article .chips-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 10px 0;
+}
+.sub-container .projects article .chips-container small{
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: var(--picton-blue-200);
+    background-color: var(--picton-blue-900);
+}
 
 footer{
     background-color: var(--picton-blue-400);
@@ -163,6 +217,11 @@ footer .container-footer{
     .image figure img{
         width: 100%;
         height: auto;
+    }
+    .sub-container .projects{
+        gap: 1rem;
+        justify-content: center;
+        margin: 0 auto;
     }
 } 
 @media screen and (max-width: 900px){
@@ -183,6 +242,12 @@ footer .container-footer{
     .cv{
         justify-content: center;
         flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 750px){
+    .sub-container .projects article figure img{
+        width: 100%;
+        height: 100%;
     }
 }
 @media screen and (max-width: 500px){
