@@ -2,83 +2,83 @@ const apiSkills=[
     {
         imagen: './assets/skills/html-5-svgrepo-com.svg',
         nombre: 'HTML',
-        experiencia: '+2 años'
+        experiencia: new Date(2020, 06, 18)
     },
     {
         imagen: './assets/skills/css-3-svgrepo-com.svg',
         nombre: 'CSS',
-        experiencia: '+2 años'
+        experiencia: new Date(2020, 06, 18)
     },
     {
         imagen: './assets/skills/javascript.svg',
         nombre: 'Javascript',
-        experiencia: '+2 años'
+        experiencia: new Date(2020, 08, 23)
     },
     {
         imagen: './assets/skills/react.svg',
         nombre: 'React',
-        experiencia: '+2 años'
+        experiencia: new Date(2021, 05, 07)
     },
     {
         imagen: './assets/skills/angular-icon.svg',
         nombre: 'Angular',
-        experiencia: '+2 años'
+        experiencia: new Date(2021, 09, 07)
     },
     {
         imagen: './assets/skills/typescript-icon.svg',
         nombre: 'Typescript',
-        experiencia: '+1 años'
+        experiencia: new Date(2021, 09, 07)
     },
     {
         imagen: './assets/skills/c-sharp.svg',
         nombre: 'C-Sharp',
-        experiencia: '+2 años'
+        experiencia: new Date(2020, 04, 07)
     },
     {
         imagen: './assets/skills/dotnet.svg',
         nombre: '.NET',
-        experiencia: '1.5 años'
+        experiencia: new Date(2021, 01, 07)
     },
     {
         imagen: './assets/skills/python.svg',
         nombre: 'Python',
-        experiencia: '+3 años'
+        experiencia: new Date(2020, 01, 01)
     },
     {
         imagen: './assets/skills/ionic-icon.svg',
         nombre: 'Ionic',
-        experiencia: '1 año'
+        experiencia: new Date(2022, 07, 07)
     },
     {
         imagen: './assets/skills/git-icon.svg',
         nombre: 'Git',
-        experiencia: '+2años'
+        experiencia: new Date(2021, 11, 07)
     },
     {
         imagen: './assets/skills/github-icon.svg',
         nombre: 'GitHub',
-        experiencia: '+2 años'
+        experiencia: new Date(2021, 11, 07)
     },
     {
         imagen: './assets/skills/microsoftsqlserver.svg',
         nombre: 'Sql Server',
-        experiencia: '+2 años'
+        experiencia: new Date(2020, 09, 07)
     },
     {
         imagen: './assets/skills/oracle.svg',
         nombre: 'Oracle',
-        experiencia: '+2 años'
+        experiencia: new Date(2020, 09, 07)
     },
     {
         imagen: './assets/skills/sqlite.svg',
         nombre: 'Sql Lite',
-        experiencia: '3 años'
+        experiencia: new Date(2020, 01, 01)
     },
     {
         imagen: './assets/skills/firebase.svg',
         nombre: 'Firebase',
-        experiencia: '1 año'
-    },
+        experiencia: new Date(2022, 07, 01)
+    }
 ]
 const apiProjects=[
     {
@@ -130,11 +130,33 @@ const projectsContainer = document.getElementById('projects');
 
 apiSkills.forEach(s=>{
 
+    var hoy = new Date();
+    var tiempoPasado= hoy - s.experiencia;
+
+    var segs = 1000;
+    var mins = segs * 60;
+    var hours = mins * 60;
+    var days = hours * 24;
+    var months = days * 30.416666666666668;
+    var years = months * 12;
+
+    var anos = Math.floor(tiempoPasado / years);
+    tiempoPasado = tiempoPasado - (anos * years);
+    var meses = Math.floor(tiempoPasado / months)
+
+    var tiempoRecorrido = `${anos}.${meses} años`
+
+    if(anos === 0){
+        tiempoRecorrido = `${meses} meses`
+    }else{
+        tiempoRecorrido = `${anos}.${meses} años`
+    }
+
     const content = `
         <article>
             <img id="image-skill" src="${s.imagen}" alt="">
             <h4 id="nombre-skill">${s.nombre}</h4>
-            <p id="experiencia-skill">${s.experiencia}</p>
+            <p id="experiencia-skill">${tiempoRecorrido}</p>
         </article>
     `
 
@@ -155,7 +177,7 @@ apiProjects.map(function(p){
             <section class="chips-container">
                 ${p.experiencia.map(function(e){
                     return '<small>'+e+'</small>'
-                })}
+                }).join('')}
             </section>
             <p>${p.descripcion}</p>
         </article>

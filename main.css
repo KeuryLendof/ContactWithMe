@@ -160,7 +160,7 @@ header{
 .sub-container .projects article{
     padding: 10px;
     border: 3px dashed var(--picton-blue-900);
-    border-radius: 1%;
+    border-radius: 0.5%;
     background-color: var(--picton-blue-200);
     max-width: 550px;
     min-width: 250px;
@@ -172,7 +172,7 @@ header{
 .sub-container .projects article figure img{
     width: 550px;
     height: 250px;
-    border-radius: 1%;
+    border-radius: 0.5%;
     object-fit:cover;
 }
 .sub-container .projects article a{
