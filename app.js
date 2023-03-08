@@ -55,13 +55,13 @@ const apiSkills=[
         experiencia: new Date(2021, 11, 07)
     },
     {
-        imagen: './assets/skills/github-icon.svg',
+        imagen: './assets/skills/icons8-github.svg',
         nombre: 'GitHub',
         experiencia: new Date(2021, 11, 07)
     },
     {
-        imagen: './assets/skills/microsoftsqlserver.svg',
-        nombre: 'Sql Server',
+        imagen: './assets/skills/sql-server.svg',
+        nombre: 'Server',
         experiencia: new Date(2020, 09, 07)
     },
     {
@@ -70,7 +70,7 @@ const apiSkills=[
         experiencia: new Date(2020, 09, 07)
     },
     {
-        imagen: './assets/skills/sqlite.svg',
+        imagen: './assets/skills/sqlite (2).svg',
         nombre: 'Sql Lite',
         experiencia: new Date(2020, 01, 01)
     },
@@ -127,6 +127,32 @@ const apiProjects=[
 
 const skillsContainer = document.getElementById('skills');
 const projectsContainer = document.getElementById('projects');
+const innerCursor = document.querySelector('.inner-cursor');
+const outerCursor = document.querySelector('.outer-cursor');
+const links = Array.from(document.querySelectorAll('a'));
+
+document.addEventListener("mousemove",moveCursor);
+
+function moveCursor(e){
+    let x = e.clientX;
+    let y = e.clientY;
+
+    innerCursor.style.left = `${x}px`;
+    innerCursor.style.top = `${y}px`;
+    outerCursor.style.left = `${x}px`;
+    outerCursor.style.top = `${y}px`;
+}
+
+links.forEach((l)=>{
+    l.addEventListener('mouseover',()=>{
+        innerCursor.classList.add('grow')
+        outerCursor.classList.add('grow')
+    })
+    l.addEventListener('mouseleave',()=>{
+        innerCursor.classList.remove('grow')
+        outerCursor.classList.remove('grow')
+    })
+})
 
 apiSkills.forEach(s=>{
 
