@@ -82,6 +82,7 @@ const apiSkills=[
 ]
 const apiProjects=[
     {
+        id: '2',
         imagen: './assets/proyectos/top-100-cryptocurrencies.vercel.app.jpeg',
         nombre: 'top-100-cryptocurrencies',
         url: 'https://top-100-cryptocurrencies.vercel.app/',
@@ -89,6 +90,7 @@ const apiProjects=[
         descripcion: 'ApiCrypto es una web que ofrece un análisis fundamental del mercado de criptomonedas, seguiendo el precio, el volumen y la capitalización bursátil.'
     },
     {
+        id: '3',
         imagen: './assets/proyectos/shabless.vercel.app.jpeg',
         nombre: 'Shabless E-Commerce',
         url: 'https://shabless.vercel.app/',
@@ -96,6 +98,7 @@ const apiProjects=[
         descripcion: 'Shabless es un ecommerce de accesorios para aquellos que buscan complementar su estilo personal con productos únicos y de calidad.'
     },
     {
+        id: '4',
         imagen: './assets/proyectos/text-to-speech-gamma.vercel.app.jpeg',
         nombre: 'Text to Speech',
         url: 'https://text-to-speech-gamma.vercel.app/',
@@ -103,6 +106,7 @@ const apiProjects=[
         descripcion: 'Text to Speech es un proyecto el cual su nombre lo describe completamente, en este podras poner tu texto y escucharlo y vice-versa.'
     },
     {
+        id: '4',
         imagen: './assets/proyectos/argerlin-rent-a-car.png',
         nombre: 'Argerlin Rent A Car',
         url: 'https://github.com/KeuryLendof/Argerlin-Car-Rental',
@@ -110,6 +114,7 @@ const apiProjects=[
         descripcion: ''
     },
     {
+        id: '5',
         imagen: './assets/proyectos/geofig.png',
         nombre: 'GeoFig',
         url: 'https://github.com/KeuryLendof/GeoFig',
@@ -117,6 +122,7 @@ const apiProjects=[
         descripcion: 'GeoFig es un sitio en el cual podras calcular el area de varias figuras geometricas de 2,3,5,6 y mas dimensiones, de manera rápida y sencilla.'
     },
     {
+        id: '6',
         imagen: './assets/proyectos/web-trailers.png',
         nombre: 'Web-Trailers',
         url: 'https://github.com/KeuryLendof/Programacion-Web-Trailers',
@@ -126,11 +132,12 @@ const apiProjects=[
 ]
 
 const skillsContainer = document.getElementById('skills');
-const projectsContainer = document.getElementById('projects');
+const projectsContainer = document.getElementById('max-slider');
 const innerCursor = document.querySelector('.inner-cursor');
 const outerCursor = document.querySelector('.outer-cursor');
 const links = Array.from(document.querySelectorAll('a'));
-const text = document.querySelector(".second-text")
+const text = document.querySelector(".second-text");
+const logo = document.getElementById('logo-top');
 
 document.addEventListener("mousemove",moveCursor);
 document.addEventListener('mousedown',()=>{
@@ -140,6 +147,9 @@ document.addEventListener('mousedown',()=>{
 document.addEventListener('mouseup',()=>{
     innerCursor.classList.remove('grow')
     outerCursor.classList.remove('grow')
+})
+logo.addEventListener('click',()=>{
+    window.scrollTo({top: 0});
 })
 
 function moveCursor(e){
@@ -212,22 +222,35 @@ apiSkills.forEach(s=>{
 
     skillsContainer.innerHTML += content;
 })
-apiProjects.map(function(p){
-    
-    const content =`
-        <article>
-            <figure>
-                <img src="${p.imagen}" alt="">
-            </figure>
-            <a href="${p.url}" target="_blank">${p.nombre} <i class="fa fa-arrow-right"></i></a>
-            <section class="chips-container">
-                ${p.experiencia.map(function(e){
-                    return '<small>'+e+'</small>'
-                }).join('')}
-            </section>
-            <p>${p.descripcion}</p>
-        </article>
-    `
-    projectsContainer.innerHTML += content;
-})
+// apiProjects.map(function(p){
+
+//     const content = `
+//         <section class="proyectos-container" data-id="${p.id}">
+
+//             <article class="proyectos-texts">
+
+//                 <h3>${p.nombre}</h3>
+//                 <p>${p.descripcion}</p>
+//                 <section class="chips-container">
+//                     ${p.experiencia.map(function(e){
+//                         return '<small>'+e+'</small>'
+//                     }).join('')}
+//                 </section>
+//                 <a href="${p.url}">
+//                     Ver proyecto <i class="fa fa-arrow-right"></i>
+//                 </a>
+                
+//             </article>
+
+//             <article class="proyectos-images">
+
+//                 <img src="${p.imagen}">
+
+//             </article>
+
+//         </section>
+//     `
+
+//     projectsContainer.innerHTML += content;
+// })
 
