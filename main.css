@@ -20,6 +20,9 @@
     cursor: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     background-color: var(--contrast-bg);
@@ -72,7 +75,7 @@ header{
 .inner-cursor.grow{
     width: 40px;
     height: 40px;
-    transition: width 0.5s, height 0.5s;
+    transition: width 1s, height 1s;
     z-index: 1;
 }
 .outer-cursor.grow{
@@ -149,6 +152,36 @@ header{
     margin: var(--space-near) 0 var(--space-away);
     line-height: 1.5;
 }
+.informacion .container-text{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+}
+.informacion .container-text .text{
+    position: relative;
+   
+}
+
+.informacion .container-text .second-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--contrast-bg);
+    border-left: 2px solid var(--accent-fg);
+    animation: animatext 7s steps(12) infinite;
+}
+@keyframes animatext{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
 
 .redes{
     display: flex;
@@ -211,7 +244,7 @@ header{
     max-width: 1300px;
     width: 90%;
     margin: 0 auto;
-    padding: 25px 0px;
+    padding: 45px 0px 0px;
 }
 .sub-title{
     padding: 15px 0px; 
@@ -219,20 +252,22 @@ header{
 .sub-container .about-me{
     background-color: var(--contrast-bg);
     border: 1px dashed var(--contrast-fg);
-    border-start-end-radius: 1rem;
-    border-end-start-radius: 1rem;
+    border-start-start-radius: 1rem;
+    border-end-end-radius: 1rem;
     position: relative;
     padding: 50px;
 }
 .sub-container .about-me::before{
     inset-inline-end: 100%;
-    inset-block-end: 100%;
+    inset-block-start: 100%;
+    transform: rotate(-90deg);
     border-block-end: 1px dashed var(--contrast-fg);
     border-inline-end: 1px dashed var(--contrast-fg);
 }
 .sub-container .about-me::after{
     inset-inline-start: 100%;
-    inset-block-start: 100%;
+    inset-block-end: 100%;
+    transform: rotate(-90deg);
     border-block-start: 1px dashed var(--contrast-fg);
     border-inline-start: 1px dashed var(--contrast-fg);
 }
@@ -364,6 +399,7 @@ header{
 footer{
     border-block-start: 1px solid var(--accent-fg);
     background-color: var(--contrast-bg);
+    margin-top: 40px;
 }
 footer .container-footer{
     max-width: 1200px;
@@ -373,7 +409,7 @@ footer .container-footer{
     padding: 30px 0px;
 }
 
-@media screen and (max-width: 1111px){
+@media screen and (max-width: 1300px){
     .image figure img{
         width: 100%;
         height: auto;
@@ -384,13 +420,17 @@ footer .container-footer{
         margin: 0 auto;
     }
 } 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     .container{
         display: flex;
         flex-direction: column;
         text-align: center;
         gap: 1rem;
         padding: 15px 0px;
+    }
+    .informacion .container-text{
+        
+        justify-content: center;
     }
     .image figure img{
         order: 1;
@@ -420,5 +460,8 @@ footer .container-footer{
     }
     .sub-container .sub-skills{
         padding: 23px;
+    }
+    .container{
+        padding: 7px;
     }
 }

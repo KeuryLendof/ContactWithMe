@@ -130,8 +130,17 @@ const projectsContainer = document.getElementById('projects');
 const innerCursor = document.querySelector('.inner-cursor');
 const outerCursor = document.querySelector('.outer-cursor');
 const links = Array.from(document.querySelectorAll('a'));
+const text = document.querySelector(".second-text")
 
 document.addEventListener("mousemove",moveCursor);
+document.addEventListener('mousedown',()=>{
+    innerCursor.classList.add('grow')
+    outerCursor.classList.add('grow')
+})
+document.addEventListener('mouseup',()=>{
+    innerCursor.classList.remove('grow')
+    outerCursor.classList.remove('grow')
+})
 
 function moveCursor(e){
     let x = e.clientX;
@@ -142,6 +151,17 @@ function moveCursor(e){
     outerCursor.style.left = `${x}px`;
     outerCursor.style.top = `${y}px`;
 }
+
+function textLoad(){
+    setTimeout(()=>{
+        text.textContent = 'Software Developer'
+    },0)
+    setTimeout(()=>{
+        text.textContent = 'Web Developer'
+    },7000)
+}
+textLoad()
+setInterval(textLoad,14000)
 
 links.forEach((l)=>{
     l.addEventListener('mouseover',()=>{
