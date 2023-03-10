@@ -98,6 +98,12 @@ header{
     z-index: 1;
 }
 
+.inner-cursor.grownone{
+    display: none;
+}
+.outer-cursor.grownone{
+    display: none;
+}
 
 
 .container{
@@ -117,6 +123,7 @@ header{
     position: relative;
     padding: 50px;
 }
+
 .container::before{
     inset-inline-end: 100%;
     inset-block-end: 100%;
