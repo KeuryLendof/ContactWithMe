@@ -212,7 +212,11 @@ apiSkills.forEach(s=>{
     }
 
     const content = `
-        <article>
+        <article
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="3000"
+        >
             <img id="image-skill" src="${s.imagen}" alt="">
             <h4 id="nombre-skill">${s.nombre}</h4>
             <p id="experiencia-skill">${tiempoRecorrido}</p>
@@ -265,3 +269,13 @@ if(device.match(/Iphone/i) || device.match(/Android/i) || device.match(/Ipod/i) 
 }else{
     /*Soy una pc ninguna accion*/
 }
+
+function showToast() {
+    const notification = document.querySelector('.toast-notification');
+    notification.classList.add('show');
+    setTimeout(() => {
+      notification.classList.remove('show');
+    }, 8000);
+}
+showToast()
+  

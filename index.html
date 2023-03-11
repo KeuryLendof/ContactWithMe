@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="./assets/img/Group 4 (2).svg" type="image/png">
     <link rel="stylesheet" href="main.css">
@@ -19,19 +20,24 @@
     <meta property="og:url" content="">
     <meta property="og:title" content="Keury Lendof">
     <meta property="og:description" content="Desarrollador de software con 2 años de experiencia, me especializo en desarrollo web y poseo amplias habilidades en lenguajes de marcado como HTML y CSS, y en lenguajes de programación como JavaScript, C# .NET y Python. Además, tengo experiencia utilizando frameworks como ReactJS y AngularJS, y en la gestión de bases de datos mediante SQL, MySQL y Firebase.">
-    <meta property="og:image" content="https://i.postimg.cc/qvLLKjv4/Group-10.png">
+    <meta property="og:image" content="https://i.postimg.cc/L67ghWPr/Group-13.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
     <meta property="twitter:title" content="Keury Lendof">
     <meta property="twitter:description" content="Desarrollador de software con 2 años de experiencia, me especializo en desarrollo web y poseo amplias habilidades en lenguajes de marcado como HTML y CSS, y en lenguajes de programación como JavaScript, C# .NET y Python. Además, tengo experiencia utilizando frameworks como ReactJS y AngularJS, y en la gestión de bases de datos mediante SQL, MySQL y Firebase.">
-    <meta property="twitter:image" content="https://i.postimg.cc/qvLLKjv4/Group-10.png">
+    <meta property="twitter:image" content="https://i.postimg.cc/L67ghWPr/Group-13.png">
     
     <title>Keury Lendof</title>
 
 </head>
 <body>
+
+    <!-- <div class="toast-notification">
+        <img src="./assets/img/Group 4 (1).svg" alt="Logo">
+        <span>welcome to my portfolio &#x1F44B;</span>
+    </div> -->
     
     <header>
 
@@ -52,8 +58,11 @@
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
 
-    <main class="container sub">
-
+    <main class="container sub"
+        data-aos="zoom-in-up" 
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1500"
+    >
         <section class="informacion">
 
             <h1>Keury A. Lendof</h1>
@@ -81,8 +90,6 @@
 
             </article>
 
-            <!-- fa-file-download -->
-
         </section>
 
         <section class="image">
@@ -93,17 +100,26 @@
 
     </main>
 
-    <div class="sub-container" id="about-me">
+    <div data-aos="zoom-in-up" 
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        class="sub-container" 
+        id="about-me"
+    >
         <article class="about-me">
             <h1 class="sub-title">About Me</h1>
             <p>Mi experiencia me ha permitido adquirir habilidades en la planificación, diseño e implementación de aplicaciones web, y en la resolución de problemas técnicos y de rendimiento, he trabajado en proyectos de desarrollo web de principio a fin, desde la creación de prototipos y diseño de interfaces de usuario hasta la implementación de soluciones de backend y optimización de rendimiento.</p>
             <br>
             <p>Soy un desarrollador proactivo y enfocado en el trabajo en equipo y en colaboración con otros desarrolladores, diseñadores y stakeholders para asegurar que los proyectos se entreguen a tiempo y cumplan con los requisitos del cliente. Estoy comprometido con la mejora continua y siempre estoy buscando oportunidades para mejorar mis habilidades y aprender nuevas tecnologías para mantenerme actualizado en el mundo en constante cambio de la tecnología.</p>
         </article>
+
     </div>
 
-    <div class="sub-container">
-
+    <div data-aos="zoom-in-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        class="sub-container"
+    >
         <section class="sub-skills">
 
             <h1 class="sub-title">Skills</h1>
@@ -114,10 +130,11 @@
 
     </div>
 
-    <div class="sub-container">
-
-        <!-- <h1 class="sub-title">Projects</h1> -->
-
+    <div data-aos="zoom-in-up" 
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        class="sub-container"
+    >
         <section class="proyectos">
             <a><img src="./assets/img/slider-left.svg" alt="" class="slider__arrow" id="before"></a>
 
@@ -287,6 +304,11 @@
 
     <script src="./app.js"></script>
     <script src="./slider.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

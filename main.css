@@ -34,6 +34,31 @@ body{
     background-image: linear-gradient(var(--accent-bg) 1px, transparent 1px), linear-gradient(90deg, var(--accent-bg) 1px, transparent 1px);
 }
 
+.toast-notification {
+    position: fixed;
+    top: 60px;
+    right: 8px;
+    padding: 5px;
+    color: #fff;
+    background-color: var(--accent-fg);
+    border: 3px solid var(--contrast-bg);
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+.toast-notification img{
+  height: 40px;
+  margin-right: 10px;
+}
+.toast-notification span{
+    line-height: 1;
+}
+.toast-notification.show {
+    opacity: 1;
+}  
+
 header{
     position: sticky;
     inset-block-start: var(--space-prueba);
