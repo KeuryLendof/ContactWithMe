@@ -270,12 +270,31 @@ if(device.match(/Iphone/i) || device.match(/Android/i) || device.match(/Ipod/i) 
     /*Soy una pc ninguna accion*/
 }
 
-function showToast() {
-    const notification = document.querySelector('.toast-notification');
-    notification.classList.add('show');
-    setTimeout(() => {
-      notification.classList.remove('show');
-    }, 8000);
-}
-showToast()
+// function showToast() {
+//     const notification = document.querySelector('.toast-notification');
+//     const greetingMessage = document.querySelector('.greeting-message');
+//     const dayIcon = document.querySelector('.day-icon');
+//     const date = new Date();
+//     const hour = date.getHours();
+  
+//     if (hour >= 6 && hour < 12) {
+//       greetingMessage.textContent = "¡Buenos días!";
+//       dayIcon.src = "./assets/img/sun-high.svg";
+//       dayIcon.alt = "Icono de sol";
+//     } else if (hour >= 12 && hour < 19) {
+//       greetingMessage.textContent = "¡Buenas tardes!";
+//       dayIcon.src = "./assets/img/sunset-2.svg";
+//       dayIcon.alt = "Icono de atardecer";
+//     } else {
+//       greetingMessage.textContent = "¡Buenas noches!";
+//       dayIcon.src = "./assets/img/moon.svg";
+//       dayIcon.alt = "Icono de luna";
+//     }
+  
+//     notification.classList.add('show');
+//     setTimeout(() => {
+//       notification.classList.remove('show');
+//     }, 3000);
+// }  
+// showToast()
   
