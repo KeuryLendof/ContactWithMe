@@ -525,6 +525,9 @@ footer .container-footer .email{
     display: flex;
     flex-direction: column;
 }
+footer .container-footer .copy{
+    text-align: start;
+}
 footer .container-footer .email a{
     position: relative;
     align-items: center;
@@ -624,6 +627,12 @@ footer .container-footer .email a::before, footer .container-footer .email a::af
     .sub-container .projects article figure img{
         width: 100%;
         height: 100%;
+    }
+    footer .container-footer{
+        justify-content: center;
+    }
+    footer .container-footer .copy{
+        text-align: center;
     }
 }
 @media screen and (max-width: 500px){
