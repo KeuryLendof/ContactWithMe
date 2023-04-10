@@ -1,5 +1,6 @@
 :root{
     --space-away: min(4vw, 2rem);
+    --space-away-res: min(4vw, 0.5rem);
     --space-away2: min(4vw, 2.3rem);
     --space-near: min(2vw, 1rem);
     --space-prueba: min(1.5vw, 0.5rem);
@@ -145,7 +146,7 @@ header{
     align-items: center;
     
     background-color: var(--contrast-bg);
-    border:  2.5px dashed var(--contrast-fg);
+    border:  2.5px solid var(--contrast-fg);
     border-start-end-radius: 1rem;
     border-end-start-radius: 1rem;
     position: relative;
@@ -155,14 +156,14 @@ header{
 .container::before{
     inset-inline-end: 100%;
     inset-block-end: 100%;
-    border-block-end: 2.5px dashed var(--contrast-fg);
-    border-inline-end: 2.5px dashed var(--contrast-fg);
+    border-block-end: 2.5px solid var(--contrast-fg);
+    border-inline-end: 2.5px solid var(--contrast-fg);
 }
 .container::after{
     inset-inline-start: 100%;
     inset-block-start: 100%;
-    border-block-start: 2.5px dashed var(--contrast-fg);
-    border-inline-start: 2.5px dashed var(--contrast-fg);
+    border-block-start: 2.5px solid var(--contrast-fg);
+    border-inline-start: 2.5px solid var(--contrast-fg);
 }
 .container::before, .container::after {
     content: '';
@@ -236,7 +237,7 @@ header{
     border-end-start-radius: 1rem;
     background-color: var(--contrast-bg);
     color: black;
-    border: 2.3px dashed var(--accent-fg);
+    border: 2.3px solid var(--accent-fg);
 }
 .cv{
     display: flex;
@@ -285,7 +286,7 @@ header{
 }
 .sub-container .about-me{
     background-color: var(--contrast-bg);
-    border: 2.5px dashed var(--contrast-fg);
+    border: 2.5px solid var(--contrast-fg);
     border-start-start-radius: 1rem;
     border-end-end-radius: 1rem;
     position: relative;
@@ -295,15 +296,15 @@ header{
     inset-inline-end: 100%;
     inset-block-start: 100%;
     transform: rotate(-90deg);
-    border-block-end: 2.5px dashed var(--contrast-fg);
-    border-inline-end: 2.5px dashed var(--contrast-fg);
+    border-block-end: 2.5px solid var(--contrast-fg);
+    border-inline-end: 2.5px solid var(--contrast-fg);
 }
 .sub-container .about-me::after{
     inset-inline-start: 100%;
     inset-block-end: 100%;
     transform: rotate(-90deg);
-    border-block-start: 2.5px dashed var(--contrast-fg);
-    border-inline-start: 2.5px dashed var(--contrast-fg);
+    border-block-start: 2.5px solid var(--contrast-fg);
+    border-inline-start: 2.5px solid var(--contrast-fg);
 }
 .sub-container .about-me::before, .sub-container .about-me::after {
     content: '';
@@ -323,7 +324,7 @@ header{
 
 .sub-container .sub-skills{
     background-color: var(--contrast-bg);
-    border: 2.5px dashed var(--contrast-fg);
+    border: 2.5px solid var(--contrast-fg);
     border-start-end-radius: 1rem;
     border-end-start-radius: 1rem;
     position: relative;
@@ -332,14 +333,14 @@ header{
 .sub-container .sub-skills::before{
     inset-inline-end: 100%;
     inset-block-end: 100%;
-    border-block-end: 2.5px dashed var(--contrast-fg);
-    border-inline-end: 2.5px dashed var(--contrast-fg);
+    border-block-end: 2.5px solid var(--contrast-fg);
+    border-inline-end: 2.5px solid var(--contrast-fg);
 }
 .sub-container .sub-skills::after{
     inset-inline-start: 100%;
     inset-block-start: 100%;
-    border-block-start: 2.5px dashed var(--contrast-fg);
-    border-inline-start: 2.5px dashed var(--contrast-fg);
+    border-block-start: 2.5px solid var(--contrast-fg);
+    border-inline-start: 2.5px solid var(--contrast-fg);
 }
 .sub-container .sub-skills::before, .sub-container .sub-skills::after {
     content: '';
@@ -363,7 +364,7 @@ header{
     justify-content: center;
     padding: 15px;
     width: 90px;
-    border: 2.3px dashed var(--contrast-fg);
+    border: 2.3px solid var(--contrast-fg);
     border-start-end-radius: 1rem;
     border-end-start-radius: 1rem;
     transition: all 0.6s ease;
@@ -384,7 +385,7 @@ header{
 
 .sub-container .proyectos{
     background-color: var(--contrast-bg);
-    border: 2.5px dashed var(--contrast-fg);
+    border: 2.5px solid var(--contrast-fg);
     border-start-start-radius: 1rem;
     border-end-end-radius: 1rem;
     position: relative;
@@ -392,19 +393,31 @@ header{
     align-items: center;
     padding: 70px 0;
 }
+/* .sub-container .sub-skills::before{
+    inset-inline-end: 100%;
+    inset-block-end: 100%;
+    border-block-end: 2.5px solid var(--contrast-fg);
+    border-inline-end: 2.5px solid var(--contrast-fg);
+}
+.sub-container .sub-skills::after{
+    inset-inline-start: 100%;
+    inset-block-start: 100%;
+    border-block-start: 2.5px solid var(--contrast-fg);
+    border-inline-start: 2.5px solid var(--contrast-fg);
+} */
 .sub-container .proyectos::before{
     inset-inline-end: 100%;
     inset-block-start: 100%;
     transform: rotate(-90deg);
-    border-block-end: 2.5px dashed var(--contrast-fg);
-    border-inline-end: 2.5px dashed var(--contrast-fg);
+    border-block-end: 2.5px solid var(--contrast-fg);
+    border-inline-end: 2.5px solid var(--contrast-fg);
 }
 .sub-container .proyectos::after{
     inset-inline-start: 100%;
     inset-block-end: 100%;
     transform: rotate(-90deg);
-    border-block-start: 2.5px dashed var(--contrast-fg);
-    border-inline-start: 2.5px dashed var(--contrast-fg);
+    border-block-start: 2.5px solid var(--contrast-fg);
+    border-inline-start: 2.5px solid var(--contrast-fg);
 }
 .sub-container .proyectos::before, .sub-container .proyectos::after {
     content: '';
@@ -506,7 +519,7 @@ header{
 /*fin*/
 
 footer{
-    border-block-start: 1px solid var(--accent-fg);
+    border-block-start: 3px solid var(--accent-fg);
     background-color: var(--contrast-bg);
     margin-top: 40px;
 }
@@ -523,6 +536,7 @@ footer .container-footer{
 }
 footer .container-footer p{
     padding: 5px 0;
+    font-weight: 700;
 }
 footer .container-footer .email{
     display: flex;
@@ -532,6 +546,7 @@ footer .container-footer .copy{
     text-align: start;
 }
 footer .container-footer .email a{
+    font-weight: 500;
     position: relative;
     align-items: center;
     display: flex;
@@ -543,19 +558,19 @@ footer .container-footer .email a{
     padding: 12px 14px;
     border-start-end-radius: 1rem;
     border-end-start-radius: 1rem;
-    border: 2.3px dashed var(--accent-fg);
+    border: 2.3px solid var(--accent-fg);
 }
 footer .container-footer .email a::before{
     inset-inline-end: 100%;
     inset-block-end: 100%;
-    border-block-end: 2.3px dashed var(--accent-fg);
-    border-inline-end: 2.3px dashed var(--accent-fg);
+    border-block-end: 2.3px solid var(--accent-fg);
+    border-inline-end: 2.3px solid var(--accent-fg);
 }
 footer .container-footer .email a::after{
     inset-inline-start: 100%;
     inset-block-start: 100%;
-    border-block-start: 2.3px dashed var(--accent-fg);
-    border-inline-start: 2.3px dashed var(--accent-fg);
+    border-block-start: 2.3px solid var(--accent-fg);
+    border-inline-start: 2.3px solid var(--accent-fg);
 }
 footer .container-footer .email a::before, footer .container-footer .email a::after {
     content: '';
@@ -636,6 +651,9 @@ footer .container-footer .email a::before, footer .container-footer .email a::af
     }
     footer .container-footer .copy{
         text-align: center;
+    }
+    header{
+        margin: var(--space-away-res);
     }
 }
 @media screen and (max-width: 500px){
