@@ -20,7 +20,6 @@
 *{
     margin: 0%;
     padding: 0%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: none;
 }
 
@@ -31,11 +30,12 @@ body{
     margin: 0;
     background-color: var(--contrast-bg);
     color: var(--contrast-fg);
-    font-family: Cy, sans-serif;
+    font-family: 'Marta';
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.25;
     letter-spacing: 1px;
-    background-size: var(--space-away2) var(--space-away2);
-    background-image: linear-gradient(var(--accent-bg) 1px, transparent 1px), linear-gradient(90deg, var(--accent-bg) 1px, transparent 1px);
+    overflow-x: hidden;
 }
 
 .toast-notification {
@@ -69,7 +69,7 @@ header{
     border: 2.6px solid var(--accent-fg);
     padding: 2px;
     box-shadow: var(--lift-shadow);
-    margin: var(--space-away);
+    margin: var(--space-away-res);
     background-color: var(--contrast-bg);
     z-index: 1;
 }
@@ -146,36 +146,15 @@ header{
     align-items: center;
     
     background-color: var(--contrast-bg);
-    border:  2.5px solid var(--contrast-fg);
     
     position: relative;
-    padding: 50px;
-    margin-bottom: 40px;
-}
-
-.container::before{
-    inset-inline-end: 100%;
-    inset-block-end: 100%;
-    border-block-end: 2.5px solid var(--contrast-fg);
-    border-inline-end: 2.5px solid var(--contrast-fg);
-}
-.container::after{
-    inset-inline-start: 100%;
-    inset-block-start: 100%;
-    border-block-start: 2.5px solid var(--contrast-fg);
-    border-inline-start: 2.5px solid var(--contrast-fg);
-}
-
-.container::before, .container::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: var(--space-near);
-    aspect-ratio: 1/1;
+    padding-top: 40px;
+    padding-bottom: 65px;
+    /* margin-top: 65px; */
 }
 
 .container2{
-    max-width: 1200px;
+    max-width: 1350px;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -184,35 +163,15 @@ header{
     justify-content: space-between;
     align-items: center;
     
-    background-color: var(--contrast-bg);
-    border:  2.5px solid var(--contrast-fg);
+    /* background-color: var(--contrast-bg); */
     
     position: relative;
     padding: 50px;
     margin-bottom: 40px;
 }
-.container2::before{
-    inset-inline-end: 100%;
-    inset-block-start: 100%;
-    transform: rotate(-90deg);
-    border-block-end: 2.5px solid var(--contrast-fg);
-    border-inline-end: 2.5px solid var(--contrast-fg);
+.container .informacion{
+    width: 60%;
 }
-.container2::after{
-    inset-inline-start: 100%;
-    inset-block-end: 100%;
-    transform: rotate(-90deg);
-    border-block-start: 2.5px solid var(--contrast-fg);
-    border-inline-start: 2.5px solid var(--contrast-fg);
-}
-.container2::before, .container2::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: var(--space-near);
-    aspect-ratio: 1/1;
-}
-
 .informacion h1{
     font-size: min(8vw, 3.5em);
     color: var(--accent-fg);
@@ -301,10 +260,15 @@ header{
     color: var(--contrast-bg);
 }
 
-.image figure{
-    color: var(--accent-fg);
-    padding: 5px;
-    background: repeating-linear-gradient( -45deg, transparent 3px, transparent 11px, currentcolor 11px, currentcolor 12px );
+.container .image{
+    width: 40%;
+    position: relative;
+}
+.image .cuote{
+  position: absolute;
+  
+    border: 2.6px solid var(--accent-fg);
+    background-color: var(--contrast-bg);
 } 
 
 .image figure img{
@@ -312,25 +276,23 @@ header{
     height: 444px;
 }
 
+.sobreMi{
+    background-color: #fff;
+    color: #000;
+}
+
 .sub-title{
     padding: 15px 0px; 
 }
-.sub-container .about-me{
-    
-}
-
 .sub-container .about-me h1{
     font-size: min(5vw, 2.7em);
-    color: var(--accent-fg);
+    color: #000;
     line-height: 1;
 }
 .sub-container .about-me p{
     line-height: 1.5;
 }
 
-.sub-container .sub-skills{
-   
-}
 
 .sub-container .sub-skills h1{
     font-size: min(5vw, 2.7em);
@@ -390,6 +352,9 @@ header{
     display: flex;
 }
 
+.proyectos-container{
+}
+
 .sub-container .proyectos .proyectos-texts{
     width: 50%;
 }
@@ -397,7 +362,7 @@ header{
     font-size: 2.7rem;
     line-height: 1;
     color: var(--accent-fg);
-    word-break: break-all;
+    word-break:keep-all;
 }
 .sub-container .proyectos .proyectos-texts p{
     line-height: 1.5;
@@ -463,7 +428,7 @@ header{
 footer{
     border-block-start: 3px solid var(--accent-fg);
     background-color: var(--contrast-bg);
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 footer .container-footer{
     max-width: 1200px;
@@ -526,6 +491,14 @@ footer .container-footer .email a::before, footer .container-footer .email a::af
         width: 100%;
         height: auto;
     }
+    /* .image figure{
+        width: 100%;
+        height: auto;
+    } */
+    /* .image .more-black{
+        min-width: 100%;
+        height: auto;
+    } */
     .sub-container .projects{
         gap: 1rem;
         justify-content: center;
@@ -538,7 +511,17 @@ footer .container-footer .email a::before, footer .container-footer .email a::af
         flex-direction: column;
         text-align: center;
         gap: 1rem;
-        padding: 15px;
+        /* padding: 15px; */
+    }
+    .container .informacion{
+        width: 100%;
+    }
+    .container .image{
+        width: auto;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
     }
     .container2{
         text-align: center;
@@ -617,9 +600,9 @@ footer .container-footer .email a::before, footer .container-footer .email a::af
     .sub-container .sub-skills{
         padding: 23px;
     }
-    .container{
+    /* .container{
         padding: 7px;
-    }
+    } */
     .container2{
         padding: 7px;
     }

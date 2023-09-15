@@ -82,7 +82,7 @@ const apiSkills=[
 ]
 const apiProjects=[
     {
-        id: '2',
+        id: '1',
         imagen: './assets/proyectos/top-100-cryptocurrencies.vercel.app.jpeg',
         nombre: 'top-100-cryptocurrencies',
         url: 'https://top-100-cryptocurrencies.vercel.app/',
@@ -90,15 +90,15 @@ const apiProjects=[
         descripcion: 'ApiCrypto es una web que ofrece un análisis fundamental del mercado de criptomonedas, seguiendo el precio, el volumen y la capitalización bursátil.'
     },
     {
-        id: '3',
-        imagen: './assets/proyectos/shabless.vercel.app.jpeg',
+        id: '2',
+        imagen: './assets/proyectos/shabless.jpeg',
         nombre: 'Shabless E-Commerce',
         url: 'https://shabless.vercel.app/',
         experiencia: ['React','Firebase'],
         descripcion: 'Shabless es un ecommerce de accesorios para aquellos que buscan complementar su estilo personal con productos únicos y de calidad.'
     },
     {
-        id: '4',
+        id: '3',
         imagen: './assets/proyectos/text-to-speech-gamma.vercel.app.jpeg',
         nombre: 'Text to Speech',
         url: 'https://text-to-speech-gamma.vercel.app/',
@@ -164,13 +164,13 @@ function moveCursor(e){
 
 function textLoad(){
     setTimeout(()=>{
-        text.textContent = 'Software Developer'
+        text.textContent = 'Desarrollador de Software'
     },0)
     setTimeout(()=>{
-        text.textContent = 'Web Developer'
+        text.textContent = 'Desarrollador Web'
     },7000)
     setTimeout(()=>{
-        text.textContent = 'Front-end Developer'
+        text.textContent = 'Desarrollador Front-end'
     },14000)
 }
 textLoad()
@@ -213,9 +213,6 @@ apiSkills.forEach(s=>{
 
     const content = `
         <article
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="3000"
         >
             <img id="image-skill" src="${s.imagen}" alt="">
             <h4 id="nombre-skill">${s.nombre}</h4>
@@ -223,43 +220,9 @@ apiSkills.forEach(s=>{
         </article>
     `
 
-    // document.getElementById('image-skill').setAttribute('src',s.imagen)
-    // document.getElementById('nombre-skill').innerText = s.nombre;
-    // document.getElementById('experiencia-skill').innerText = s.experiencia;
-
     skillsContainer.innerHTML += content;
 })
-// apiProjects.map(function(p){
 
-//     const content = `
-//         <section class="proyectos-container" data-id="${p.id}">
-
-//             <article class="proyectos-texts">
-
-//                 <h3>${p.nombre}</h3>
-//                 <p>${p.descripcion}</p>
-//                 <section class="chips-container">
-//                     ${p.experiencia.map(function(e){
-//                         return '<small>'+e+'</small>'
-//                     }).join('')}
-//                 </section>
-//                 <a href="${p.url}">
-//                     Ver proyecto <i class="fa fa-arrow-right"></i>
-//                 </a>
-                
-//             </article>
-
-//             <article class="proyectos-images">
-
-//                 <img src="${p.imagen}">
-
-//             </article>
-
-//         </section>
-//     `
-
-//     projectsContainer.innerHTML += content;
-// })
 
 var device = navigator.userAgent;
 
@@ -269,32 +232,3 @@ if(device.match(/Iphone/i) || device.match(/Android/i) || device.match(/Ipod/i) 
 }else{
     /*Soy una pc ninguna accion*/
 }
-
-// function showToast() {
-//     const notification = document.querySelector('.toast-notification');
-//     const greetingMessage = document.querySelector('.greeting-message');
-//     const dayIcon = document.querySelector('.day-icon');
-//     const date = new Date();
-//     const hour = date.getHours();
-  
-//     if (hour >= 6 && hour < 12) {
-//       greetingMessage.textContent = "¡Buenos días!";
-//       dayIcon.src = "./assets/img/sun-high.svg";
-//       dayIcon.alt = "Icono de sol";
-//     } else if (hour >= 12 && hour < 19) {
-//       greetingMessage.textContent = "¡Buenas tardes!";
-//       dayIcon.src = "./assets/img/sunset-2.svg";
-//       dayIcon.alt = "Icono de atardecer";
-//     } else {
-//       greetingMessage.textContent = "¡Buenas noches!";
-//       dayIcon.src = "./assets/img/moon.svg";
-//       dayIcon.alt = "Icono de luna";
-//     }
-  
-//     notification.classList.add('show');
-//     setTimeout(() => {
-//       notification.classList.remove('show');
-//     }, 3000);
-// }  
-// showToast()
-  

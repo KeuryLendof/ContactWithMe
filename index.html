@@ -60,10 +60,8 @@
     <div class="outer-cursor"></div>
 
     <main class="container"
-        data-aos="zoom-in-up" 
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1500"
     >
+
         <section class="informacion">
 
             <h1>Keury A. Lendof</h1>
@@ -86,8 +84,8 @@
 
             <article class="cv">
 
-                <a href="#about-me">More About Me <i class="fa fa-arrow-down"></i></a>
-                <a href="./assets/Keury_Lendof_CV.pdf" download="Keury Lendof CV" target="_blank">Download CV <i class="fa fa-file-download"></i></a>
+                <a href="#about-me">Más Sobre Mí <i class="fa fa-arrow-down"></i></a>
+                <a href="./assets/Keury_Lendof_CV.pdf" download="Keury Lendof CV" target="_blank">Descargar CV <i class="fa fa-file-download"></i></a>
 
             </article>
 
@@ -97,18 +95,23 @@
             <figure>
                 <img src="./assets/img/keury itla circular 2.png" alt="">
             </figure>
+            <!-- <article class="cuote">
+                "People ignore software that ignores people"
+            </article> -->
         </section>
 
     </main>
 
-    <div data-aos="zoom-in-up" 
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000"
-        class="sub-container container2" 
-        id="about-me"
-    >
+    <div class="sobreMi">
+
+        <div
+            class="sub-container container" 
+            id="about-me"
+        >
         <article class="about-me">
-            <h1 class="sub-title">About Me</h1>
+            <h1 class="sub-title">Sobre Mí</h1>
+            <p>Como desarrollador de software con 2 años de experiencia, me especializo en desarrollo web y poseo amplias habilidades en lenguajes de marcado como HTML y CSS, y en lenguajes de programación como JavaScript, C# .NET y Python. Además, tengo experiencia utilizando frameworks como ReactJS y AngularJS, y en la gestión de bases de datos mediante SQL, MySQL y Firebase.</p>
+            <br>
             <p>Mi experiencia me ha permitido adquirir habilidades en la planificación, diseño e implementación de aplicaciones web, y en la resolución de problemas técnicos y de rendimiento, he trabajado en proyectos de desarrollo web de principio a fin, desde la creación de prototipos y diseño de interfaces de usuario hasta la implementación de soluciones de backend y optimización de rendimiento.</p>
             <br>
             <p>Soy un desarrollador proactivo y enfocado en el trabajo en equipo y en colaboración con otros desarrolladores, diseñadores y stakeholders para asegurar que los proyectos se entreguen a tiempo y cumplan con los requisitos del cliente. Estoy comprometido con la mejora continua y siempre estoy buscando oportunidades para mejorar mis habilidades y aprender nuevas tecnologías para mantenerme actualizado en el mundo en constante cambio de la tecnología.</p>
@@ -116,14 +119,14 @@
 
     </div>
 
-    <div data-aos="zoom-in-up"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000"
+    </div>
+
+    <div
         class="sub-container container"
     >
         <section class="sub-skills">
 
-            <h1 class="sub-title">Skills</h1>
+            <h1 class="sub-title">Habilidades</h1>
 
             <article id="skills" class="skills"></article>
 
@@ -132,9 +135,7 @@
     </div>
 
 
-    <div data-aos="zoom-in-up" 
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000"
+    <div
         class="sub-container container2"
     >
         <section class="proyectos">
@@ -160,7 +161,7 @@
 
                     <article class="proyectos-images">
 
-                        <img src="./assets/proyectos/shabless.vercel.app.jpeg" alt="">
+                        <img src="./assets/proyectos/shabless.jpeg" alt="">
 
                     </article>
 
@@ -313,13 +314,62 @@
 
                 </section>
 
+                <section class="proyectos-container" data-id="8">
+
+                    <article class="proyectos-texts">
+
+                        <h3>Sistema de Gestión Académica</h3>
+                        <p>Este es un sistema de gestión académica diseñado para brindar a profesores y estudiantes una plataforma eficiente para administrar y acceder a la información relacionada con sus cursos y calificaciones.</p>
+                        <section class="chips-container">
+                            <small>Python</small>
+                            <small>Sql Server</small>
+                        </section>
+                        <a href="https://github.com/KeuryLendof/samsung_proyect" target="_blank">
+                            Ver proyecto <i class="fa fa-arrow-right"></i>
+                        </a>
+                        
+                    </article>
+
+                    <article class="proyectos-images">
+
+                        <img src="./assets/proyectos/login.png" alt="">
+
+                    </article>
+
+                </section>
+
+                <section class="proyectos-container" data-id="9">
+
+                    <article class="proyectos-texts">
+
+                        <h3>Gestión Estudiantil</h3>
+                        <p>Este es un sistema de gestión académica diseñado para brindar a profesores y estudiantes una plataforma eficiente para administrar y acceder a la información relacionada con sus cursos y calificaciones.</p>
+                        <section class="chips-container">
+                            <small>Angular</small>
+                            <small>ASP.NET Core</small>
+                            <small>Web Api</small>
+                        </section>
+                        <a href="https://github.com/KeuryLendof/WebEstudiantesCdeNet" target="_blank">
+                            Ver proyecto <i class="fa fa-arrow-right"></i>
+                        </a>
+                        
+                    </article>
+
+                    <article class="proyectos-images">
+
+                        <img src="./assets/proyectos/gestion_estudiantil.png" alt="">
+
+                    </article>
+
+                </section>
+
             </div>
 
             <a><img src="./assets/img/slider-right.svg" alt="" class="slider__arrow" id="next"></a>
         </section>
 
     </div>
- 
+
     <footer>
         <section class="container-footer">
             <article class="copy">
@@ -350,9 +400,9 @@
     <script src="./slider.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
+    <!-- <script>
         AOS.init();
-    </script>
+    </script> -->
 
 </body>
 </html>
