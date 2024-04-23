@@ -1,5 +1,5 @@
 const sliders = [...document.querySelectorAll('.proyectos-container')];
-let arrowNext = document.getElementById('next');
+let arrowNext = document.getElementById('nextt');
 let arrowBefore = document.getElementById('before');
 let value;
 
@@ -22,7 +22,14 @@ function changePosition(change){
     
 }
 
-
+document.getElementById('next').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').appendChild(lists[0]);
+}
+document.getElementById('prev').onclick = function(){
+    let lists = document.querySelectorAll('.item');
+    document.getElementById('slide').prepend(lists[lists.length - 1]);
+}
 
 
 // const sliders = [...document.querySelectorAll('.slider__body')];

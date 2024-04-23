@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="icon" href="./assets/img/Group 4 (2).svg" type="image/png">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
 
     <!-- Primary Meta Tags -->
     <title>Keury Lendof</title>
@@ -38,7 +40,9 @@
         <img src="" alt="" class="day-icon">
         <span class="greeting-message"></span>
     </div> -->
-      
+    <div id="progress">
+        <span id="progress-value"></span>
+    </div>
     
     <header>
 
@@ -365,10 +369,68 @@
 
             </div>
 
-            <a><img src="./assets/img/slider-right.svg" alt="" class="slider__arrow" id="next"></a>
+            <a><img src="./assets/img/slider-right.svg" alt="" class="slider__arrow" id="nextt"></a>
         </section>
 
     </div>
+
+    <!-- <main class="sub-container container2">
+         <div class="container-projects">
+        <div id="slide">
+            <div class="item" style="background-image: url(./assets/proyectos/argerlin-rent-a-car.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/proyectos/shabless.jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/proyectos/totalsportsKL.jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/proyectos/top-100-cryptocurrencies.vercel.app\ \(2\).jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/proyectos/text-to-speech-gamma.vercel.app.jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/proyectos/gestion_estudiantil.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev">
+                <img src="./assets/img/slider-left.svg" alt="" class="slider__arrow">
+            </button>
+            <button id="next">
+                <img src="./assets/img/slider-right.svg" alt="" class="slider__arrow">
+            </button>
+        </div>
+    </div>
+    </main> -->
+   
 
     <footer>
         <section class="container-footer">
@@ -398,6 +460,21 @@
 
     <script src="./app.js"></script>
     <script src="./slider.js"></script>
+    <script>
+        let scrollPercentage = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round( pos * 100 / calcHeight);
+
+            scrollProgress.style.background = `conic-gradient(#96e6a1 ${scrollValue}%, #d4fc79 ${scrollValue}%)`;
+            progressValue.textContent = `${scrollValue}%`;
+        }
+
+        window.onscroll = scrollPercentage;
+        window.onload = scrollPercentage;
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- <script>
