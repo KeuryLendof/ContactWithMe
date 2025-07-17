@@ -46,7 +46,8 @@
             background-size: 2rem 2rem;
         }
         .glow-shadow {
-            box-shadow: 0 0 15px 2px #34D399, 0 0 30px 5px #3B82F6;
+            /* Glow más sutil */
+            box-shadow: 0 0 25px 4px rgba(52, 211, 153, 0.3);
         }
         /* Estilos para la animación de scroll */
         .fade-in-section {
@@ -67,12 +68,22 @@
     <main class="w-full max-w-2xl mx-auto space-y-12">
 
         <!-- 1. Profile Section -->
-        <header class="text-center pt-8 fade-in-section">
-            <img src="https://placehold.co/128x128/0A0A0A/FFFFFF?text=KL" alt="Foto de Keury Lendof"
-                class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-emerald-400 glow-shadow">
-            <h1 class="text-3xl font-bold text-white">Keury A. Lendof</h1>
-            <p class="text-gray-400 mt-1">Desarrollador de Software | Creador de Contenido | Entusiasta de la Tecnología
-            </p>
+        <header class="flex flex-col sm:flex-row items-center gap-6 pt-8 fade-in-section">
+            <!-- Avatar rediseñado sin imagen de fondo -->
+            <div class="w-28 h-28 rounded-full border-2 border-emerald-400 glow-shadow flex-shrink-0 flex items-center justify-center">
+                <span class="text-4xl font-bold text-white">KL</span>
+            </div>
+            <div class="text-center sm:text-left">
+                <h1 class="text-4xl font-bold text-white">Keury A. Lendof</h1>
+                <p class="text-lg text-gray-400 mt-1">Desarrollador de Software | Entusiasta de la Tecnología</p>
+                <div class="mt-3 text-sm text-emerald-400 flex items-center justify-center sm:justify-start gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Santo Domingo, DR</span>
+                    <span class="text-gray-500 mx-1">·</span>
+                    <i class="fas fa-clock"></i>
+                    <span id="local-time">--:--:-- --</span>
+                </div>
+            </div>
         </header>
 
         <!-- 2. Essential Links -->
@@ -104,9 +115,7 @@
         <!-- 3. Technical Blog -->
         <section class="fade-in-section">
             <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">✍️ Mis Últimos Artículos</h2>
-            <!-- El contenedor del blog ahora se generará dinámicamente -->
             <div id="blog-container" class="space-y-2"></div>
-            <!-- Botón para cargar más artículos -->
             <div class="mt-6 text-center">
                 <button id="load-more-btn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300">
                     Cargar más
@@ -118,7 +127,6 @@
         <section class="fade-in-section">
             <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">🚀 Mi Stack Tecnológico</h2>
             <div id="tech-stack-container" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 text-center">
-                <!-- Los iconos del stack se generarán aquí -->
             </div>
         </section>
 
@@ -127,22 +135,22 @@
             <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">🎨 Mis Favoritos</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
                 <a href="https://astro.build/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Astro
+                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Astro
                     (Framework)</a>
                 <a href="https://angular.io/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Angular
+                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Angular
                     (Framework)</a>
                 <a href="https://tailwindcss.com/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Tailwind
+                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Tailwind
                     CSS</a>
                 <a href="https://refactoring.fm/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Refactoring
+                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Refactoring
                     (Newsletter)</a>
                 <a href="https://syntax.fm/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Syntax.fm
+                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Syntax.fm
                     (Podcast)</a>
                 <a href="https://www.goodreads.com/book/show/34466963-atomic-habits" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">Atomic
+                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Atomic
                     Habits (Libro)</a>
             </div>
         </section>
@@ -159,6 +167,13 @@
         </section>
 
         <footer class="text-center text-gray-500 text-sm py-6 fade-in-section">
+            <div class="mb-2 flex items-center justify-center gap-2">
+                <a id="email-link" href="mailto:lendofkeury@gmail.com" class="hover:text-emerald-400 transition-colors">lendofkeury@gmail.com</a>
+                <button id="copy-email-btn" data-copy-text="Copiar" class="relative px-2 py-1 bg-gray-700 text-xs rounded-md hover:bg-gray-600 transition-all">
+                    <i class="fas fa-copy"></i>
+                    <span class="copy-feedback absolute -top-8 left-1/2 -translate-x-1/2 bg-emerald-500 text-gray-900 px-2 py-1 rounded-md text-xs font-bold opacity-0 transition-opacity duration-300 pointer-events-none">¡Copiado!</span>
+                </button>
+            </div>
             <p>Diseñado y construido por Keury Lendof.</p>
             <p>Hecho con <span class="text-emerald-400">Tailwind CSS</span> y mucho <span
                     class="text-red-500">&hearts;</span>.</p>
@@ -177,116 +192,25 @@
                     id: 'astro-portfolio',
                     title: 'Por qué elegí Astro para mi portafolio',
                     summary: 'Mi experiencia creando un sitio ultrarrápido y moderno.',
-                    content: `
-                        <div class="prose prose-invert max-w-none">
-                            <h4>Introducción</h4>
-                            <p>Cuando empecé a rediseñar mi portafolio quería algo que cargara rápido, que me permitiera usar componentes de React, y que se integrara bien con Tailwind. Después de investigar opciones como Next.js, Gatsby y Eleventy, Astro fue la que más me convenció.</p>
-                            <h4>Ventajas clave</h4>
-                            <ul>
-                                <li><strong>Zero JavaScript por defecto:</strong> solo envía el JavaScript necesario.</li>
-                                <li><strong>Integración con múltiples frameworks:</strong> puedes usar React, Vue o Svelte en un mismo proyecto.</li>
-                                <li><strong>Generación estática fácil:</strong> ideal para un sitio personal.</li>
-                            </ul>
-                            <h4>Instalación</h4>
-                            <p>Para empezar, ejecuté este comando:</p>
-                            <pre><code>npm create astro@latest</code></pre>
-                            <h4>Mi configuración</h4>
-                            <p>En el archivo <code>astro.config.mjs</code>, añadí Tailwind y React:</p>
-                            <pre><code>import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import react from "@astrojs/react";
-
-export default defineConfig({
-  integrations: [tailwind(), react()],
-});</code></pre>
-                            <h4>Conclusión</h4>
-                            <p>Si buscas modernidad y rendimiento, recomiendo darle una oportunidad a Astro. Para mí, fue un cambio total.</p>
-                        </div>
-                    `
+                    content: `<div class="prose prose-invert max-w-none"><h4>Introducción</h4><p>Cuando empecé a rediseñar mi portafolio quería algo que cargara rápido, que me permitiera usar componentes de React, y que se integrara bien con Tailwind. Después de investigar opciones como Next.js, Gatsby y Eleventy, Astro fue la que más me convenció.</p><h4>Ventajas clave</h4><ul><li><strong>Zero JavaScript por defecto:</strong> solo envía el JavaScript necesario.</li><li><strong>Integración con múltiples frameworks:</strong> puedes usar React, Vue o Svelte en un mismo proyecto.</li><li><strong>Generación estática fácil:</strong> ideal para un sitio personal.</li></ul><h4>Instalación</h4><p>Para empezar, ejecuté este comando:</p><pre><code>npm create astro@latest</code></pre><h4>Mi configuración</h4><p>En el archivo <code>astro.config.mjs</code>, añadí Tailwind y React:</p><pre><code>import { defineConfig } from 'astro/config';\nimport tailwind from "@astrojs/tailwind";\nimport react from "@astrojs/react";\n\nexport default defineConfig({\n  integrations: [tailwind(), react()],\n});</code></pre><h4>Conclusión</h4><p>Si buscas modernidad y rendimiento, recomiendo darle una oportunidad a Astro. Para mí, fue un cambio total.</p></div>`
                 },
                 {
                     id: 'tailwind-tricks',
                     title: 'Mis 7 trucos favoritos con Tailwind CSS',
                     summary: 'Tips reales que uso en casi todos mis proyectos.',
-                    content: `
-                        <div class="prose prose-invert max-w-none">
-                            <p>Tailwind CSS cambió mi forma de maquetar interfaces. Aquí van algunos trucos que aplico a diario:</p>
-                            <ol>
-                                <li><strong>Gradientes dinámicos:</strong> <code>bg-gradient-to-r from-purple-500 to-pink-500</code></li>
-                                <li><strong>Dark mode sin esfuerzo:</strong> <code>dark:</code> prefijos en clases.</li>
-                                <li><strong>Animaciones suaves:</strong></li>
-                            </ol>
-                            <pre><code>transition-all duration-300 hover:scale-105</code></pre>
-                            <ol start="4">
-                                <li><strong>Aspect ratio en imágenes y videos:</strong></li>
-                            </ol>
-                            <pre><code>&lt;div class="aspect-w-16 aspect-h-9"&gt;
-  &lt;iframe src="..." /&gt;
-&lt;/div&gt;</code></pre>
-                            <ol start="5">
-                                <li><strong>Backdrop blur en modales:</strong></li>
-                            </ol>
-                            <pre><code>backdrop-blur-md bg-black/50</code></pre>
-                            <ol start="6">
-                                <li><strong>Textos con degradado:</strong></li>
-                            </ol>
-                            <pre><code>bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent</code></pre>
-                            <h4>Conclusión</h4>
-                            <p>Tailwind es una herramienta que hace que todo sea más rápido y flexible. Si aún no la usas, dale una oportunidad.</p>
-                        </div>
-                    `
+                    content: `<div class="prose prose-invert max-w-none"><p>Tailwind CSS cambió mi forma de maquetar interfaces. Aquí van algunos trucos que aplico a diario:</p><ol><li><strong>Gradientes dinámicos:</strong> <code>bg-gradient-to-r from-purple-500 to-pink-500</code></li><li><strong>Dark mode sin esfuerzo:</strong> <code>dark:</code> prefijos en clases.</li><li><strong>Animaciones suaves:</strong></li></ol><pre><code>transition-all duration-300 hover:scale-105</code></pre><ol start="4"><li><strong>Aspect ratio en imágenes y videos:</strong></li></ol><pre><code>&lt;div class="aspect-w-16 aspect-h-9"&gt;\n  &lt;iframe src="..." /&gt;\n&lt;/div&gt;</code></pre><ol start="5"><li><strong>Backdrop blur en modales:</strong></li></ol><pre><code>backdrop-blur-md bg-black/50</code></pre><ol start="6"><li><strong>Textos con degradado:</strong></li></ol><pre><code>bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent</code></pre><h4>Conclusión</h4><p>Tailwind es una herramienta que hace que todo sea más rápido y flexible. Si aún no la usas, dale una oportunidad.</p></div>`
                 },
                 {
                     id: 'openai-gpt',
                     title: 'Cómo empecé a usar OpenAI y GPT en mis proyectos',
                     summary: 'Una guía breve para integrar IA en tus aplicaciones.',
-                    content: `
-                        <div class="prose prose-invert max-w-none">
-                            <h4>Introducción</h4>
-                            <p>La inteligencia artificial está transformando todo, desde la generación de contenido hasta los asistentes virtuales. Una de las APIs más accesibles es la de OpenAI, que permite integrar modelos como GPT en aplicaciones web.</p>
-                            <h4>Configuración básica</h4>
-                            <p>Para empezar, instala el paquete oficial:</p>
-                            <pre><code>npm install openai</code></pre>
-                            <p>Después, puedes inicializar la API con tu clave:</p>
-                            <pre><code>import OpenAI from "openai";
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });</code></pre>
-                            <h4>Ejemplo de uso</h4>
-                            <pre><code>const completion = await openai.chat.completions.create({
-  model: "gpt-4",
-  messages: [{ role: "system", content: "Eres un asistente útil." },
-             { role: "user", content: "¿Cuál es la capital de Francia?" }]
-});
-console.log(completion.choices[0].message);</code></pre>
-                            <h4>Conclusión</h4>
-                            <p>La API es sorprendentemente fácil de usar. Si te interesa crear chatbots o generadores de texto, es una gran herramienta para comenzar.</p>
-                        </div>
-                    `
+                    content: `<div class="prose prose-invert max-w-none"><h4>Introducción</h4><p>La inteligencia artificial está transformando todo, desde la generación de contenido hasta los asistentes virtuales. Una de las APIs más accesibles es la de OpenAI, que permite integrar modelos como GPT en aplicaciones web.</p><h4>Configuración básica</h4><p>Para empezar, instala el paquete oficial:</p><pre><code>npm install openai</code></pre><p>Después, puedes inicializar la API con tu clave:</p><pre><code>import OpenAI from "openai";\nconst openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });</code></pre><h4>Ejemplo de uso</h4><pre><code>const completion = await openai.chat.completions.create({\n  model: "gpt-4",\n  messages: [{ role: "system", content: "Eres un asistente útil." },\n             { role: "user", content: "¿Cuál es la capital de Francia?" }]\n});\nconsole.log(completion.choices[0].message);</code></pre><h4>Conclusión</h4><p>La API es sorprendentemente fácil de usar. Si te interesa crear chatbots o generadores de texto, es una gran herramienta para comenzar.</p></div>`
                 },
                 {
                     id: 'ai-images',
                     title: 'Usando imágenes generadas por IA en proyectos web',
                     summary: 'Mi experiencia con DALL·E y Midjourney.',
-                    content: `
-                        <div class="prose prose-invert max-w-none">
-                            <h4>Introducción</h4>
-                            <p>Hoy en día puedes generar imágenes únicas con IA en pocos segundos. Herramientas como DALL·E, Midjourney y Stable Diffusion son opciones muy potentes para diseñar portadas, ilustraciones o placeholders.</p>
-                            <h4>Cómo generar una imagen con DALL·E</h4>
-                            <pre><code>const response = await openai.images.generate({
-  prompt: "A futuristic city skyline at sunset",
-  n: 1,
-  size: "1024x1024"
-});
-const imageUrl = response.data[0].url;</code></pre>
-                            <h4>Casos de uso</h4>
-                            <ul>
-                                <li><strong>Landing pages:</strong> imágenes que se ajustan al estilo de tu marca.</li>
-                                <li><strong>Ilustraciones de artículos:</strong> contenido visual sin preocuparte por licencias.</li>
-                                <li><strong>Redes sociales:</strong> creativos únicos.</li>
-                            </ul>
-                            <h4>Conclusión</h4>
-                            <p>La generación de imágenes por IA abre posibilidades infinitas. Mi recomendación es empezar con DALL·E por su facilidad de uso y resultados de buena calidad.</p>
-                        </div>
-                    `
+                    content: `<div class="prose prose-invert max-w-none"><h4>Introducción</h4><p>Hoy en día puedes generar imágenes únicas con IA en pocos segundos. Herramientas como DALL·E, Midjourney y Stable Diffusion son opciones muy potentes para diseñar portadas, ilustraciones o placeholders.</p><h4>Cómo generar una imagen con DALL·E</h4><pre><code>const response = await openai.images.generate({\n  prompt: "A futuristic city skyline at sunset",\n  n: 1,\n  size: "1024x1024"\n});\nconst imageUrl = response.data[0].url;</code></pre><h4>Casos de uso</h4><ul><li><strong>Landing pages:</strong> imágenes que se ajustan al estilo de tu marca.</li><li><strong>Ilustraciones de artículos:</strong> contenido visual sin preocuparte por licencias.</li><li><strong>Redes sociales:</strong> creativos únicos.</li></ul><h4>Conclusión</h4><p>La generación de imágenes por IA abre posibilidades infinitas. Mi recomendación es empezar con DALL·E por su facilidad de uso y resultados de buena calidad.</p></div>`
                 }
             ];
 
@@ -307,42 +231,35 @@ const imageUrl = response.data[0].url;</code></pre>
             const blogContainer = document.getElementById('blog-container');
             const techStackContainer = document.getElementById('tech-stack-container');
             const loadMoreBtn = document.getElementById('load-more-btn');
+            const copyEmailBtn = document.getElementById('copy-email-btn');
             let currentIndex = 0;
-            const postsPerLoad = 2; // Cuántos artículos cargar cada vez
+            const postsPerLoad = 2; 
 
             function renderPosts() {
                 const postsToRender = blogPosts.slice(currentIndex, currentIndex + postsPerLoad);
                 postsToRender.forEach(post => {
                     const articleElement = document.createElement('div');
                     articleElement.classList.add('article-item', 'fade-in-section');
-                    articleElement.innerHTML = `
-                        <div class="article-header flex justify-between items-center cursor-pointer bg-gray-800 p-4 rounded-lg transition-all duration-300">
-                            <div>
-                                <h3 class="font-bold">${post.title}</h3>
-                                <p class="text-sm text-gray-400">${post.summary}</p>
-                            </div>
-                            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
-                        </div>
-                        <div class="article-content hidden p-6 bg-gray-800 rounded-b-lg -mt-2 border-t border-gray-700">
-                            ${post.content}
-                        </div>
-                    `;
+                    articleElement.innerHTML = `<div class="article-header flex justify-between items-center cursor-pointer bg-gray-800 p-4 rounded-lg transition-all duration-300"><div><h3 class="font-bold">${post.title}</h3><p class="text-sm text-gray-400">${post.summary}</p></div><i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i></div><div class="article-content hidden p-6 bg-gray-800 rounded-b-lg -mt-2 border-t border-gray-700">${post.content}</div>`;
                     blogContainer.appendChild(articleElement);
                 });
                 currentIndex += postsPerLoad;
                 if (currentIndex >= blogPosts.length) {
                     loadMoreBtn.style.display = 'none';
                 }
-                observeSections(); // Re-observar nuevas secciones
+                observeSections();
             }
 
             function renderTechStack() {
                 techStack.forEach(tech => {
                     const techElement = document.createElement('div');
-                    techElement.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'bg-gray-800', 'p-4', 'rounded-lg', 'transition-all', 'duration-300', 'hover:bg-gray-700', 'transform', 'hover:scale-110');
+                    techElement.classList.add('group', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'bg-gray-800', 'p-4', 'rounded-lg', 'transition-all', 'duration-300', 'hover:bg-gray-700', 'transform', 'hover:scale-110');
                     techElement.innerHTML = `
-                        ${tech.icon}
+                        <div class="h-10 w-10 flex items-center justify-center">${tech.icon}</div>
                         <span class="mt-2 text-sm font-medium">${tech.name}</span>
+                        <div class="absolute -top-10 hidden group-hover:block px-2 py-1 bg-black text-white text-xs rounded-md whitespace-nowrap transition-opacity duration-300">
+                            ${tech.name}
+                        </div>
                     `;
                     techStackContainer.appendChild(techElement);
                 });
@@ -369,10 +286,42 @@ const imageUrl = response.data[0].url;</code></pre>
                 } else {
                     content.classList.remove('hidden');
                     icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                    // Scroll to the opened article
                     header.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             });
+
+            copyEmailBtn.addEventListener('click', () => {
+                const email = 'lendofkeury@gmail.com';
+                const feedbackEl = copyEmailBtn.querySelector('.copy-feedback');
+                
+                // Usamos un textarea temporal para copiar
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+
+                // Mostramos el feedback
+                feedbackEl.style.opacity = '1';
+                setTimeout(() => {
+                    feedbackEl.style.opacity = '0';
+                }, 2000);
+            });
+
+            function updateTime() {
+                const timeElement = document.getElementById('local-time');
+                if (!timeElement) return;
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-US', {
+                    timeZone: 'America/Santo_Domingo',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                });
+                timeElement.textContent = timeString;
+            }
 
             // =================================================================
             // 4. LÓGICA DE ANIMACIÓN DE SCROLL
@@ -400,6 +349,8 @@ const imageUrl = response.data[0].url;</code></pre>
             renderPosts();
             renderTechStack();
             observeSections();
+            updateTime();
+            setInterval(updateTime, 1000);
             loadMoreBtn.addEventListener('click', renderPosts);
         });
     </script>
