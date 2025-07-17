@@ -11,21 +11,21 @@
     
     <!-- SEO y Descripción -->
     <meta name="description" content="Un hub personal de Keury Lendof. Encuentra mis enlaces, artículos de blog, y proyectos favoritos en un solo lugar.">
-    <link rel="icon" href="https://placehold.co/32x32/0A0A0A/34D399?text=KL" type="image/png">
+    <link rel="icon" href="https://placehold.co/32x32/0A0A0A/FFFFFF?text=KL" type="image/png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://keurylendof.com/"> <!-- Cambia esto por la URL final de tu hub -->
     <meta property="og:title" content="Keury Lendof - Hub Personal">
     <meta property="og:description" content="Un hub personal de Keury Lendof. Encuentra mis enlaces, artículos de blog, y proyectos favoritos en un solo lugar.">
-    <meta property="og:image" content="https://placehold.co/1200x630/0A0A0A/34D399/png?text=Keury+Lendof"> <!-- Cambia esto por una imagen para compartir -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0A0A0A/FFFFFF/png?text=Keury+Lendof"> <!-- Cambia esto por una imagen para compartir -->
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://keurylendof.com/"> <!-- Cambia esto por la URL final de tu hub -->
     <meta property="twitter:title" content="Keury Lendof - Hub Personal">
     <meta property="twitter:description" content="Un hub personal de Keury Lendof. Encuentra mis enlaces, artículos de blog, y proyectos favoritos en un solo lugar.">
-    <meta property="twitter:image" content="https://placehold.co/1200x630/0A0A0A/34D399/png?text=Keury+Lendof"> <!-- Cambia esto por una imagen para compartir -->
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0A0A0A/FFFFFF/png?text=Keury+Lendof"> <!-- Cambia esto por una imagen para compartir -->
 
     <!-- Tailwind CSS con Plugin de Tipografía -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
@@ -41,13 +41,7 @@
     <style>
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background-color: #0A0A0A;
-            background-image: radial-gradient(circle at 1px 1px, #222222 1px, transparent 0);
-            background-size: 2rem 2rem;
-        }
-        .glow-shadow {
-            /* Glow más sutil */
-            box-shadow: 0 0 25px 4px rgba(52, 211, 153, 0.3);
+            background-color: #111111; /* Fondo ligeramente más claro */
         }
         /* Estilos para la animación de scroll */
         .fade-in-section {
@@ -63,23 +57,23 @@
     <!-- ======================================================= -->
 </head>
 
-<body class="text-white flex justify-center p-4 sm:p-6 antialiased">
+<body class="text-gray-300 flex justify-center p-4 sm:p-6 antialiased">
 
     <main class="w-full max-w-2xl mx-auto space-y-12">
 
         <!-- 1. Profile Section -->
         <header class="flex flex-col sm:flex-row items-center gap-6 pt-8 fade-in-section">
             <!-- Avatar rediseñado sin imagen de fondo -->
-            <div class="w-28 h-28 rounded-full border-2 border-emerald-400 glow-shadow flex-shrink-0 flex items-center justify-center">
+            <div class="w-28 h-28 rounded-full border-2 border-gray-700 flex-shrink-0 flex items-center justify-center">
                 <span class="text-4xl font-bold text-white">KL</span>
             </div>
             <div class="text-center sm:text-left">
                 <h1 class="text-4xl font-bold text-white">Keury A. Lendof</h1>
                 <p class="text-lg text-gray-400 mt-1">Desarrollador de Software | Entusiasta de la Tecnología</p>
-                <div class="mt-3 text-sm text-emerald-400 flex items-center justify-center sm:justify-start gap-2">
+                <div class="mt-3 text-sm text-gray-500 flex items-center justify-center sm:justify-start gap-2">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Santo Domingo, DR</span>
-                    <span class="text-gray-500 mx-1">·</span>
+                    <span class="text-gray-600 mx-1">·</span>
                     <i class="fas fa-clock"></i>
                     <span id="local-time">--:--:-- --</span>
                 </div>
@@ -89,24 +83,24 @@
         <!-- 2. Essential Links -->
         <section class="space-y-4 fade-in-section">
             <a href="https://keurylendof.com" target="_blank"
-                class="block w-full bg-emerald-500 text-gray-900 text-center p-4 rounded-lg font-bold text-lg hover:bg-emerald-400 transition-all duration-300 transform hover:scale-105">
+                class="block w-full bg-white text-black text-center p-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition-all duration-300">
                 <i class="fas fa-rocket mr-2"></i> Portafolio Principal
             </a>
             <div class="grid grid-cols-2 gap-4">
                 <a href="https://github.com/KeuryLendof" target="_blank"
-                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-colors duration-300">
                     <i class="fab fa-github"></i> GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/keury-lendof-599b82185/" target="_blank"
-                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-colors duration-300">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
                 <a href="https://x.com/keurylendof1" target="_blank"
-                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-colors duration-300">
                     <i class="fab fa-x-twitter"></i> X
                 </a>
                 <a href="https://www.threads.net/@keurylendof" target="_blank"
-                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    class="flex items-center justify-center gap-2 bg-gray-800 text-center p-4 rounded-lg hover:bg-gray-700 transition-colors duration-300">
                     <i class="fab fa-threads"></i> Threads
                 </a>
             </div>
@@ -114,10 +108,10 @@
 
         <!-- 3. Technical Blog -->
         <section class="fade-in-section">
-            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">✍️ Mis Últimos Artículos</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-gray-400">✍️ Mis Últimos Artículos</h2>
             <div id="blog-container" class="space-y-2"></div>
             <div class="mt-6 text-center">
-                <button id="load-more-btn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300">
+                <button id="load-more-btn" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">
                     Cargar más
                 </button>
             </div>
@@ -125,39 +119,39 @@
 
         <!-- 4. Tech Stack -->
         <section class="fade-in-section">
-            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">🚀 Mi Stack Tecnológico</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-gray-400">🚀 Mi Stack Tecnológico</h2>
             <div id="tech-stack-container" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 text-center">
             </div>
         </section>
 
         <!-- 5. Mis Favoritos -->
         <section class="fade-in-section">
-            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">🎨 Mis Favoritos</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-gray-400">🎨 Mis Favoritos</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
                 <a href="https://astro.build/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Astro
+                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Astro
                     (Framework)</a>
                 <a href="https://angular.io/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Angular
+                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Angular
                     (Framework)</a>
                 <a href="https://tailwindcss.com/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Tailwind
+                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Tailwind
                     CSS</a>
                 <a href="https://refactoring.fm/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Refactoring
+                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Refactoring
                     (Newsletter)</a>
                 <a href="https://syntax.fm/" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Syntax.fm
+                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Syntax.fm
                     (Podcast)</a>
                 <a href="https://www.goodreads.com/book/show/34466963-atomic-habits" target="_blank"
-                    class="bg-gray-800 p-3 rounded-lg border border-transparent hover:border-emerald-500 transition-all duration-300">Atomic
+                    class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-300">Atomic
                     Habits (Libro)</a>
             </div>
         </section>
 
         <!-- 6. Spotify Playlist -->
         <section class="fade-in-section">
-            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-emerald-400">🎵 Mi Música en Bucle
+            <h2 class="text-2xl font-bold mb-4 text-center sm:text-left text-gray-400">🎵 Mi Música en Bucle
             </h2>
             <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/playlist/37i9dQZF1EpjlQnco6BmgR?theme=0" width="100%" height="352"
@@ -168,14 +162,14 @@
 
         <footer class="text-center text-gray-500 text-sm py-6 fade-in-section">
             <div class="mb-2 flex items-center justify-center gap-2">
-                <a id="email-link" href="mailto:lendofkeury@gmail.com" class="hover:text-emerald-400 transition-colors">lendofkeury@gmail.com</a>
+                <a id="email-link" href="mailto:lendofkeury@gmail.com" class="hover:text-gray-300 transition-colors">lendofkeury@gmail.com</a>
                 <button id="copy-email-btn" data-copy-text="Copiar" class="relative px-2 py-1 bg-gray-700 text-xs rounded-md hover:bg-gray-600 transition-all">
                     <i class="fas fa-copy"></i>
-                    <span class="copy-feedback absolute -top-8 left-1/2 -translate-x-1/2 bg-emerald-500 text-gray-900 px-2 py-1 rounded-md text-xs font-bold opacity-0 transition-opacity duration-300 pointer-events-none">¡Copiado!</span>
+                    <span class="copy-feedback absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-200 text-black px-2 py-1 rounded-md text-xs font-bold opacity-0 transition-opacity duration-300 pointer-events-none">¡Copiado!</span>
                 </button>
             </div>
             <p>Diseñado y construido por Keury Lendof.</p>
-            <p>Hecho con <span class="text-emerald-400">Tailwind CSS</span> y mucho <span
+            <p>Hecho con <span class="text-gray-400">Tailwind CSS</span> y mucho <span
                     class="text-red-500">&hearts;</span>.</p>
         </footer>
 
@@ -253,7 +247,7 @@
             function renderTechStack() {
                 techStack.forEach(tech => {
                     const techElement = document.createElement('div');
-                    techElement.classList.add('group', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'bg-gray-800', 'p-4', 'rounded-lg', 'transition-all', 'duration-300', 'hover:bg-gray-700', 'transform', 'hover:scale-110');
+                    techElement.classList.add('group', 'relative', 'flex', 'flex-col', 'items-center', 'justify-center', 'bg-gray-800', 'p-4', 'rounded-lg', 'transition-all', 'duration-300', 'hover:bg-gray-700');
                     techElement.innerHTML = `
                         <div class="h-10 w-10 flex items-center justify-center">${tech.icon}</div>
                         <span class="mt-2 text-sm font-medium">${tech.name}</span>
